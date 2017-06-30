@@ -8,7 +8,7 @@ SPMS(Simple Project Management System)
 
 <span style="float:right;">
 <a style="color:white;" 
-  href="<%=request.getContextPath()%>/project/list.do">프로젝트</a>
+  href="<%=request.getContextPath()%>/board/list.do">프로젝트</a>
 <a style="color:white;" 
   href="<%=request.getContextPath()%>/member/list.do">회원</a>  
 
