@@ -2,6 +2,8 @@ package spms.controls;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,7 +31,10 @@ public class MemberDeleteController implements Controller, DataBinding {
   public String execute(Map<String, Object> model) throws Exception {
     Integer no = (Integer)model.get("no");
     memberDao.delete(no);
-    
+    HttpSession session = (HttpSession)model.get("session");
+    session.setAttribute("member", null);
     return "redirect:list.do";
+
+    
   }
 }

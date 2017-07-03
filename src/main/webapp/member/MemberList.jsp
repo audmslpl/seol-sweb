@@ -12,7 +12,7 @@
 <body>
 <jsp:include page="/Header.jsp"/>
 <h1>회원목록</h1>
-<p><a href='add.do'>신규 회원</a></p>
+
 <table border="1">
 <tr>
   <th><c:choose>
@@ -64,10 +64,10 @@
 <c:forEach var="member" items="${members}">
 <tr> 
   <td>${member.no}</td>
-  <td><a href='update.do?no=${member.no}'>${member.name}</a></td>
+  <td>${member.name}</td>
   <td>${member.email}</td>
   <td>${member.createdDate}</td>
-  <td><a href='delete.do?no=${member.no}'>[삭제]</a></td>
+
 </tr>
 </c:forEach>
 </table>

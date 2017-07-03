@@ -16,13 +16,19 @@ SPMS(Simple Project Management System)
               empty sessionScope.member.email}">
 <a style="color:white;" 
   href="<%=request.getContextPath()%>/auth/login.do">로그인</a>
+  
+<a style="color:white;" 
+  href="<%=request.getContextPath()%>/member/add.do">회원가입</a>
 </c:if>  
             
 <c:if test="${!empty sessionScope.member and 
               !empty sessionScope.member.email}">
-${sessionScope.member.name}
+<a style="color:white;" href='<%=request.getContextPath()%>/member/update.do?no=${sessionScope.member.no}'>${sessionScope.member.name}</a>  
+
 (<a style="color:white;" 
   href="<%=request.getContextPath()%>/auth/logout.do">로그아웃</a>)
+
 </c:if>
+
 </span>
 </div>

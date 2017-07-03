@@ -1,4 +1,3 @@
-<%-- 프런트 컨트롤러 적용 - 링크에 .do 붙임 --%>
 <%@ page 
   language="java" 
   contentType="text/html; charset=UTF-8"
@@ -9,8 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 등록</title>
-<script type="text/JavaScript" src="../js/jquery-3.2.1.min.js"></script>
-<script type="text/JavaScript" src="../js/chkpass.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/chkpass.js"></script>
+
 
 
 </head>
@@ -21,10 +21,10 @@
 이름: <input type='text' name='name'><br>
 이메일: <input type='text' name='email'><br>
 암호: <input type='password' name='password' id='password'><br>
-암호확인: <input type='password' name='chkpassword' id ='chkpassword'><br>
-<font name="check" size="2" color="red"></font>
+암호확인: <input type='password' name='chkpassword' id ='chkpassword'>
+<font name="check" size="2" color="red"></font><br>
 
-<input type='submit' value='추가' id='button_joinus' disabled="">
+<input type='submit' value='추가' id='button_joinus' disabled="" >
 <input type='reset' value='취소'>
 </form>
 <jsp:include page="/Tail.jsp"/>

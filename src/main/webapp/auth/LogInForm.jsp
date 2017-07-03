@@ -16,6 +16,8 @@
 이메일: <input type="text" name="email"><br>
 암호: <input type="password" name="password"><br>
 <input type="submit" value="로그인">
+<a style="color:black;"   href="<%=request.getContextPath()%>/member/list.do">Friends</a>
+  
 </form>
 </body>
 </html>
