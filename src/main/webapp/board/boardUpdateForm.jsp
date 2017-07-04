@@ -27,31 +27,17 @@ label {
   <input id="no" 
   type='text' name='no' size="5" value="${board.no}"
   readonly></li>
+<li><label for="mname">작성자</label> 
+  <input id="mname" 
+  type='text' name='mname' size="5" value="${board.mname}"
+  readonly></li>
 <li><label for="title">제목</label> 
   <input id="title" 
   type='text' name='title' size="50" value="${board.title}"></li>
 <li><label for="content">내용</label>
   <textarea id="content" 
   name='content' rows="5" cols="40">${board.content}</textarea></li>
-<li><label for="sdate">시작일</label>
-  <input id="sdate" 
-  type='text' name='startDate' placeholder="예)2013-01-01"
-  value="${board.startDate}"></li>
-<li><label for="edate">종료일</label>
-  <input id="edate" 
-  type='text' name='endDate' placeholder="예)2013-01-01"
-  value="${board.endDate}"></li>
-<li><label for="state">상태</label>
-  <select id="state" name="state">
-    <option value="0" ${board.state == 0 ? "selected" : ""}>준비</option>
-    <option value="1" ${board.state == 1 ? "selected" : ""}>진행</option>
-    <option value="2" ${board.state == 2 ? "selected" : ""}>완료</option>
-    <option value="3" ${board.state == 3 ? "selected" : ""}>취소</option>
-  </select></li>
-<li><label for="tags">태그</label>
-  <input id="tags" 
-  type='text' name='tags' placeholder="예)태그1 태그2 태그3" size="50"
-  value="${project.tags}"></li>
+
 </ul>
 <input type='submit' value='저장'>
 <input type='button' value='삭제' 

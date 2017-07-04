@@ -15,7 +15,7 @@ public class BoardListController implements Controller, DataBinding {
   BoardDao boardDao;
   
   @Autowired
-  public BoardListController setMemberDao(BoardDao boardDao) {
+  public BoardListController setBoardDao(BoardDao boardDao) {
     this.boardDao = boardDao;
     return this;
   }

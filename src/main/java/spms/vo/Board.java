@@ -6,11 +6,10 @@ public class Board {
   protected int     no; //프로젝트일련번호
   protected String  title; //프로젝트명
   protected String  content; //설명
-  protected Date    startDate; //시작일
-  protected Date    endDate; //종료일
-  protected int     state; //상태
+  protected int     mno; //writer
+  protected String  mname; //writer name
   protected Date    createdDate; //생성일
-  protected String  tags; //태그들
+  protected int     count; //상태
   
   public int getNo() {
     return no;
@@ -33,27 +32,21 @@ public class Board {
     this.content = content;
     return this;
   }
-  public Date getStartDate() {
-    return startDate;
+  public int getMno() {
+    return mno;
   }
-  public Board setStartDate(Date startDate) {
-    this.startDate = startDate;
+  public Board setMno(int mno) {
+    this.mno = mno;
     return this;
   }
-  public Date getEndDate() {
-    return endDate;
+  public String getMname() {
+    return mname;
   }
-  public Board setEndDate(Date endDate) {
-    this.endDate = endDate;
+  public Board setMname(String mname) {
+    this.mname = mname;
     return this;
   }
-  public int getState() {
-    return state;
-  }
-  public Board setState(int state) {
-    this.state = state;
-    return this;
-  }
+
   public Date getCreatedDate() {
     return createdDate;
   }
@@ -61,11 +54,11 @@ public class Board {
     this.createdDate = createdDate;
     return this;
   }
-  public String getTags() {
-    return tags;
-  }
-  public Board setTags(String tags) {
-    this.tags = tags;
+  public int getCount() {
+	    return count;
+	  }
+  public Board setCount(int count) {
+    this.count = count;
     return this;
   }
 }

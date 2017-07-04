@@ -64,18 +64,7 @@ public class MySqlBoardDao implements BoardDao {
     	if (!Board.getContent().equals(original.getContent())) {
     		paramMap.put("content", Board.getContent());
     	}
-    	if (Board.getStartDate().compareTo(original.getStartDate()) != 0) {
-    		paramMap.put("startDate", Board.getStartDate());
-    	}
-    	if (Board.getEndDate().compareTo(original.getEndDate()) != 0) {
-    		paramMap.put("endDate", Board.getEndDate());
-    	}
-    	if (Board.getState() != original.getState()) {
-    		paramMap.put("state", Board.getState());
-    	}
-    	if (!Board.getTags().equals(original.getTags())) {
-    		paramMap.put("tags", Board.getTags());
-    	}
+
     	
     	if (paramMap.size() > 0) {
     		paramMap.put("no", Board.getNo());

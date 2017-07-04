@@ -15,7 +15,7 @@ public class BoardUpdateController implements Controller, DataBinding {
   BoardDao boardDao;
   
   @Autowired
-  public BoardUpdateController setProjectDao(BoardDao boardDao) {
+  public BoardUpdateController setBoardDao(BoardDao boardDao) {
     this.boardDao = boardDao;
     return this;
   }

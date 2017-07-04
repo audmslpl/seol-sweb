@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 등록</title>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="../js/chkpass.js"></script>
+<script type="text/javascript" src="../js/chkm.js"></script>
 
 
 

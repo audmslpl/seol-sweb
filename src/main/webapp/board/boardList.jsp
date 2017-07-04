@@ -18,13 +18,13 @@
 <tr>
   <th><c:choose>
     <c:when test="${orderCond == 'BNO_ASC'}">
-      <a href="list.do?orderCond=PNO_DESC">번호↑</a>
+      <a href="list.do?orderCond=BNO_DESC">번호↑</a>
     </c:when>
     <c:when test="${orderCond == 'BNO_DESC'}">
-      <a href="list.do?orderCond=PNO_ASC">번호↓</a>
+      <a href="list.do?orderCond=BNO_ASC">번호↓</a>
     </c:when>
     <c:otherwise>
-      <a href="list.do?orderCond=PNO_ASC">번호︎</a>
+      <a href="list.do?orderCond=BNO_ASC">번호︎</a>
     </c:otherwise>
   </c:choose></th>
   <th><c:choose>
@@ -39,36 +39,36 @@
     </c:otherwise>
   </c:choose></th>
   <th><c:choose>
-    <c:when test="${orderCond == 'STARTDATE_ASC'}">
-      <a href="list.do?orderCond=STARTDATE_DESC">시작일↑</a>
+    <c:when test="${orderCond == 'WRITER_ASC'}">
+      <a href="list.do?orderCond=WRITER_DESC">작성자↑</a>
     </c:when>
-    <c:when test="${orderCond == 'STARTDATE_DESC'}">
-      <a href="list.do?orderCond=STARTDATE_ASC">시작일↓</a>
+    <c:when test="${orderCond == 'WRITER_DESC'}">
+      <a href="list.do?orderCond=WRITER_ASC">작성자↓</a>
     </c:when>
     <c:otherwise>
-      <a href="list.do?orderCond=STARTDATE_ASC">시작일</a>
+      <a href="list.do?orderCond=WRITER_ASC">작성자</a>
     </c:otherwise>
   </c:choose></th>
   <th><c:choose>
-    <c:when test="${orderCond == 'ENDDATE_ASC'}">
-      <a href="list.do?orderCond=ENDDATE_DESC">종료일↑</a>
+    <c:when test="${orderCond == 'CREATEDDATE_ASC'}">
+      <a href="list.do?orderCond=CREATEDDATE_DESC">작성일↑</a>
     </c:when>
-    <c:when test="${orderCond == 'ENDDATE_DESC'}">
-      <a href="list.do?orderCond=ENDDATE_ASC">종료일↓</a>
+    <c:when test="${orderCond == 'CREATEDDATE_DESC'}">
+      <a href="list.do?orderCond=CREATEDDATE_ASC">작성일↓</a>
     </c:when>
     <c:otherwise>
-      <a href="list.do?orderCond=ENDDATE_ASC">종료일</a>
+      <a href="list.do?orderCond=CREATEDDATE_ASC">작성일</a>
     </c:otherwise>
   </c:choose></th>
   <th><c:choose>
-    <c:when test="${orderCond == 'STATE_ASC'}">
-      <a href="list.do?orderCond=STATE_DESC">상태↑</a>
+    <c:when test="${orderCond == 'HITCOUNT_ASC'}">
+      <a href="list.do?orderCond=HITCOUNT_DESC">조회수↑</a>
     </c:when>
-    <c:when test="${orderCond == 'STATE_DESC'}">
-      <a href="list.do?orderCond=STATE_ASC">상태↓</a>
+    <c:when test="${orderCond == 'HITCOUNT_DESC'}">
+      <a href="list.do?orderCond=HITCOUNT_ASC">조회수↓</a>
     </c:when>
     <c:otherwise>
-      <a href="list.do?orderCond=STATE_ASC">상태</a>
+      <a href="list.do?orderCond=HITCOUNT_ASC">조회수</a>
     </c:otherwise>
   </c:choose></th>
   <th></th>
@@ -76,10 +76,10 @@
 <c:forEach var="board" items="${boards}">
 <tr> 
   <td>${board.no}</td>
-  <td><a href='update.do?no=${board.no}'>${board.title}</a></td>
-  <td>${board.startDate}</td>
-  <td>${board.endDate}</td>
-  <td>${board.state}</td>
+  <td><a href='ShowOne.do?no=${board.no}'>${board.title}</a></td>
+  <td>${board.mname}</td>
+  <td>${board.createdDate}</td>
+  <td>${board.count}</td>
   <td><a href='delete.do?no=${board.no}'>[삭제]</a></td>
 </tr>
 </c:forEach>
