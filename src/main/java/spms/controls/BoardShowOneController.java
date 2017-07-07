@@ -29,16 +29,17 @@ public class BoardShowOneController implements Controller, DataBinding {
   
   @Override
   public String execute(Map<String, Object> model) throws Exception {
-    Board board = (Board)model.get("board");
-    
-    if (board.getTitle() == null) { 
+
       Integer no = (Integer)model.get("no");
       Board detailInfo = boardDao.selectOne(no);
+      
+      Integer count = detailInfo.getCount();
+      count++;
+      detailInfo.setCount(count);
+      boardDao.update(detailInfo);
+;
       model.put("board", detailInfo);
       return "/board/boardShowOneForm.jsp";
 
-    } else { 
-      return "redirect:list.do";
-    }
   }
 }

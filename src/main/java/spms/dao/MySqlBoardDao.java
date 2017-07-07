@@ -64,6 +64,9 @@ public class MySqlBoardDao implements BoardDao {
     	if (!Board.getContent().equals(original.getContent())) {
     		paramMap.put("content", Board.getContent());
     	}
+    	if (Board.getCount() != original.getCount()) {
+    		paramMap.put("count", Board.getCount());
+    	}
 
     	
     	if (paramMap.size() > 0) {
