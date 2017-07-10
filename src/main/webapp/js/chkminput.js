@@ -1,18 +1,16 @@
  $(function(){
 	 
-  $('#password').keyup(function(){
-   $('font[name=check]').text('');
-  }); //#user_pass.keyup
 
   $('#chkpassword').keyup(function(){
    if($('#password').val()!=$('#chkpassword').val()){
-    $('font[name=check]').text('');
-    $('font[name=check]').html("암호틀림");
-    $('#button_joinus').attr('disabled',true);
+	    $('#button_del').prop('disabled',true);
+
+	   $('#button_joinus').prop('disabled',true);
+
    }else{
-    $('font[name=check]').text('');
-    $('font[name=check]').html("암호맞음");
-    $('#button_joinus').attr('disabled',false);
+	    $('#button_del').prop('disabled',false);
+
+	   $('#button_joinus').prop('disabled',false);
     }
   }); //#chpass.keyup
  });

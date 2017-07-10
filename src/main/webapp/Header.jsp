@@ -24,10 +24,10 @@
                     </button>
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
-                    <li class="nav-item"><a class="nav-link link" href="notice.html">NOTICE</a> </li>
+                    <li class="nav-item"><a class="nav-link link" href="<%=request.getContextPath()%>/notice/list.do">NOTICE</a> </li>
                     <li class="nav-item"><a class="nav-link link" href="<%=request.getContextPath()%>/board/list.do">BOARD</a></li>
-                    <li class="nav-item"><a class="nav-link link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link link" href="help.html">HELP</a></li>
+                    <li class="nav-item"><a class="nav-link link" href="<%=request.getContextPath()%>/gallery/list.do">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link link" href="<%=request.getContextPath()%>/help/list.do">HELP</a></li>
                     <li class="nav-item"><a class="nav-link link" href="<%=request.getContextPath()%>/member/list.do">FRIEDNS</a></li>
 					<c:if test="${empty sessionScope.member or empty sessionScope.member.email}">                    
                     <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="<%=request.getContextPath()%>/auth/login.do">login</a>

@@ -57,7 +57,6 @@ label {
                         <div class="form-table mbr-valign-top col-md-9  formblock" data-form-type="formoid">
 
                             <form action='ShowOne.do' method='post' data-form-title="INTRO WITH FORM">
-                                <input type="hidden" value="20qJwpvjuFolFZK3bb3KTtwgbCAiX9ycGmEa4UNyahPL/9ucgbomVAoQZfbSTtt/ZMtGZL0gJD52lbLXzDgkTRkZX4HgCcpZ56bNKtIRcEFbmPhQ55brtgPBR39wjPLB" data-form-email="true">
 
                                     <div class="col-xs-12">
                                          <input id="no"   type='text' name='no' size="5" value="${board.no}" readonly class="form-control" data-form-field="No" placeholder="${board.no}">
@@ -74,14 +73,22 @@ label {
                                     <div class="col-xs-12">
                                        <textarea id="content"   name='content' rows="7" cols="40" readonly class="form-control"  data-form-field="Message" style="resize:none" >${board.content}</textarea>
                                     </div>
+                                    <div class="row">
                                       <div class="mbr-section-btn">
+                                       <div class="col-xs-4">
                                       	<a class="btn btn-lg btn-info" href="list.do">게시판으로 돌아가기</a>
-                                      	<c:if test="${sessionScope.member.no == board.mno}">
-                                      	<a class="btn btn-lg btn-info" href="update.do?no=${board.no}">현재 게시글 수정하기</a>
-                                        <a class="btn btn-lg btn-info" href="delete.do?no=${board.no}">현재 게시글 삭제하기</a>
-                                      	</c:if>
-                                        
                                       </div>
+                                      	<c:if test="${sessionScope.member.no == board.mno}">
+                                      <div class="col-xs-4">
+                                      	<a class="btn btn-lg btn-info" href="update.do?no=${board.no}">현재 게시글 수정하기</a>
+                                       </div>
+                                      <div class="col-xs-4">
+                                        <a class="btn btn-lg btn-info" href="delete.do?no=${board.no}">현재 게시글 삭제하기</a>
+                                      </div>
+                                      	</c:if>
+                                      
+                                	</div>        
+                                </div>
 >
                           </form>
                         </div>

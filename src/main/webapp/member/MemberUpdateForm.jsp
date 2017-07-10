@@ -1,26 +1,109 @@
-<%-- 프런트 컨트롤러 적용 - 링크에 .do 붙임 --%>
 <%@ page 
-  language="java" 
-  contentType="text/html; charset=UTF-8"
+	language="java" 
+	contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-  "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원정보</title>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="Website Maker Description">
+  <title>게시판 목록</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="../assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="../assets/tether/tether.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../assets/theme/css/style.css">
+  <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/chkminput.js"></script>
+
+
 </head>
 <body>
-<h1>회원정보</h1>
-<form action='update.do' method='post'>
-번호: <input type='text' name='no' value='${member.no}' readonly><br>
-이름: <input type='text' name='name' value='${member.name}'><br>
-이메일: <input type='text' name='email' value='${member.email}'><br>
-가입일: ${member.createdDate}<br>
-<input type='submit' value='저장'>
-<input type='button' value='삭제' 
-  onclick='location.href="delete.do?no=${member.no}";'>
-<input type='button' value='취소' onclick='location.href="list.do"'>
-</form>
+<jsp:include page="/Header.jsp"/>
+
+
+<section class="mbr-section mbr-section-hero mbr-section-full extHeader1" id="extHeader1-0" style="background-image: url(../assets/images/sea.jpg);">
+
+    <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(126, 155, 159);">
+    </div>
+
+    <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">
+
+            <div class="container">
+                <div class="mbr-section row">
+                    <div class="mbr-table-md-up">
+                        
+                        
+                        
+
+                        <div class="mbr-table-cell mbr-right-padding-md-up col-md-7 text-xs-center text-md-right">
+
+                            <h3 class="mbr-section-title display-2">INTRO WITH FORM</h3>
+
+                            <div class="mbr-section-text lead">
+                                <p>Full-screen intro with image background and subscribe form on the right side. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel sunt, neque voluptatibus excepturi laboriosam possimus adipisci quidem dolores omnis, nemo dolore eligendi blanditiis voluptatem in, doloribus hic aperiam maiores fugit.</p>
+                            </div>
+
+                            
+
+                        </div>
+                        <div class="form-table mbr-valign-top col-md-9  formblock" data-form-type="formoid" style="border: none;">
+
+                            <form action="update.do" method="post" style="background-color: rgb(250, 250, 250);" data-form-title="INTRO WITH FORM">
+                                    <div class="col-xs-12">
+                                         <input type="hidden" class="form-control dark" readonly name="no" required="" data-form-field="No" value='${member.no}'  style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                    </div>
+                                    
+                                    <div class="col-xs-12">
+                                         <input type="text" class="form-control dark" name="name" required="" data-form-field="Name" value='${member.name}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                    </div>
+
+                                    <div class="col-xs-12"> 
+                                         <input type="text" class="form-control dark" name="email" required="" data-form-field="Email" value='${member.email}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
+                                    </div>
+                                    <div class="col-xs-12"> 
+                                         <input type="text" class="form-control dark" name="CreatedDate" readonly required="" data-form-field="CreatedDate"  value='${member.createdDate}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
+                                    </div>
+                                    <div class="col-xs-12">
+                                         <input type="password" class="form-control dark" name="password" id="password"required="" data-form-field="Password" placeholder="Password" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                    </div>
+                                    <div class="col-xs-12">
+                                         <input type="password" class="form-control dark" name="chkpassword" id="chkpassword" required="" data-form-field="Password" placeholder="Retype Password" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                    </div>
+									<div class="row">
+										<div class="col-xs-6" style="margin-top: 10px; text-align: center"><button type="submit" class="btn btn-primary" id='button_joinus' disabled="">Register</button></div>
+                            			<div class="col-xs-6" style="margin-top: 10px; text-align: center"><button type="button" class="btn btn-primary" id='button_del' onclick='location.href="delete.do?no=${member.no}";'  disabled="">Delete</button></div>
+                            		
+                            		</div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#extHeader2-0"><i class="mbr-arrow-icon"></i></a></div>
+
+</section>
+
+
+
+
+<jsp:include page="/Tail.jsp"/>
 </body>
 </html>

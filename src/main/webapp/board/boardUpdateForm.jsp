@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="../assets/animate.css/animate.min.css">
   <link rel="stylesheet" href="../assets/theme/css/style.css">
   <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
 <style>
 ul { padding: 0; }
 li { list-style:none; }
@@ -57,7 +57,6 @@ label {
                         <div class="form-table mbr-valign-top col-md-9  formblock" data-form-type="formoid">
 
                             <form action='update.do' method='post' data-form-title="INTRO WITH FORM">
-                                <input type="hidden" value="20qJwpvjuFolFZK3bb3KTtwgbCAiX9ycGmEa4UNyahPL/9ucgbomVAoQZfbSTtt/ZMtGZL0gJD52lbLXzDgkTRkZX4HgCcpZ56bNKtIRcEFbmPhQ55brtgPBR39wjPLB" data-form-email="true">
 
                                     <div class="col-xs-12">
                                          <input id="no"   type='text' name='no' size="5" value="${board.no}" readonly class="form-control" data-form-field="No" placeholder="${board.no}">
@@ -74,14 +73,22 @@ label {
                                     <div class="col-xs-12">
                                        <textarea id="content"   name='content' rows="7" cols="40"  class="form-control"  data-form-field="Message" style="resize:none" >${board.content}</textarea>
                                     </div>
+                                    <div class="row">
                                       <div class="mbr-section-btn">
-                                      	<c:if test="${sessionScope.member.no == board.mno}">
-                                        	 <input type="submit" class="btn btn-info" value="게시글 저장">
-                                        	 <input type='reset' class="btn btn-info" value='취소' '>
-                                        </c:if>
-                                      		<a class="btn btn-lg btn-info" href="list.do">게시판으로 돌아가기</a>
-
+                                       <div class="col-xs-4">
+                                      	<button class="btn btn-lg btn-info" href="list.do">게시판으로 돌아가기</button>
                                       </div>
+                                      	<c:if test="${sessionScope.member.no == board.mno}">
+                                      <div class="col-xs-4">
+                                      	<button class="btn btn-lg btn-info" type="submit">수정한 내용 저장하기</button>
+                                       </div>
+                                      <div class="col-xs-4">
+                                        <button class="btn btn-lg btn-info" type="reset">초기상태로 되돌리기</button>
+                                      </div>
+                                      	</c:if>
+                                      
+                                	</div>        
+                                </div>
 >
                           </form>
                         </div>
