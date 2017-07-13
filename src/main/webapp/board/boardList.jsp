@@ -116,7 +116,26 @@
 									</c:forEach>
        								</tbody>
        	</table>
-        
+
+		<c:if test="${startPage > 10}">
+			<a href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
+		</c:if>
+		
+		<c:forEach var="i" begin="${startPage}" end="${endPage}">
+		<c:if test="${orderCond==null}">
+			<a href="list.do?currentPage=${i}">${i}</a>
+		</c:if>
+		<c:if test="${orderCond!=null}">
+			<a href="list.do?orderCond=${orderCond}&currentPage=${i}">${i}</a>
+		</c:if>
+			</c:forEach>
+		
+		
+		<c:if test="${endPage <totalPage}">
+			<a href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}">다음</a>
+		</c:if>
+		
+
     </div>
     
 </section>

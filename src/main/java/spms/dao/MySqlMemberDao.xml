@@ -54,6 +54,7 @@
     delete from MEMBERS 
     where MNO=#{value}
   </delete>
+
   
   <select id="exist" parameterType="map" resultMap="memberResultMap">
     select MNO, MNAME, EMAIL, CRE_DATE, MOD_DATE

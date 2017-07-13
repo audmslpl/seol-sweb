@@ -88,7 +88,7 @@ public class MySqlMemberDao implements MemberDao {
       sqlSession.close();
     }
   }
-  
+
   public Member exist(String email, String password) throws Exception {
   	HashMap<String,String> paramMap = new HashMap<String,String>();
   	paramMap.put("email", email);

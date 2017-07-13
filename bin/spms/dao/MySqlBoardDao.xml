@@ -12,7 +12,13 @@
     <result column="CRE_DATE" property="createdDate" javaType="java.sql.Date"/>
     <result column="HITCOUNT" property="count"/>
   </resultMap>
+
   
+   <select id="selectCount" resultType="int">
+    select count(*)
+    from BOARDS
+  </select>
+    
   <select id="selectList" parameterType="map" resultMap="boardResultMap">
     select BNO, BNAME, MNAME, CRE_DATE, HITCOUNT
     from BOARDS
@@ -29,7 +35,17 @@
         <when test="orderCond == 'BNO_ASC'">BNO asc</when>
         <otherwise>BNO desc</otherwise>
     </choose>
+    <if test="offsetNum == null">
+    limit 0,#{pageSize}
+    </if>
+    <if test="offsetNum != null">
+    limit #{offsetNum},#{pageSize}
+    </if>
   </select>
+  
+  
+
+  
   
   <insert id="insert" parameterType="board">
     insert into BOARDS(BNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)

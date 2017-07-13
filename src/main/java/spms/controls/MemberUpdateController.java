@@ -2,6 +2,8 @@ package spms.controls;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -30,9 +32,13 @@ public class MemberUpdateController implements Controller, DataBinding {
   @Override
   public String execute(Map<String, Object> model) throws Exception {
     Member member = (Member)model.get("member");
-    
+    HttpSession session;
     if (member.getEmail() == null) { 
       Integer no = (Integer)model.get("no");
+      session = (HttpSession)model.get("session");
+      Member temp = (Member)session.getAttribute("member");
+      if(temp.getNo() != no)
+    	  return "redirect:list.do";
       Member detailInfo = memberDao.selectOne(no);
       model.put("member", detailInfo);
       return "/member/MemberUpdateForm.jsp";

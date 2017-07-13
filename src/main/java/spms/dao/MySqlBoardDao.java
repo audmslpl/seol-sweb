@@ -51,6 +51,18 @@ public class MySqlBoardDao implements BoardDao {
     }
   }
 
+
+
+  public int  selectCount() throws Exception { 
+	    SqlSession sqlSession = sqlSessionFactory.openSession();
+	    try {
+	      return sqlSession.selectOne("spms.dao.BoardDao.selectCount"); 
+	    } finally {
+	      sqlSession.close();
+	    }
+	  }
+
+
   public int update(Board Board) throws Exception { 
     SqlSession sqlSession = sqlSessionFactory.openSession();
     try {
@@ -92,4 +104,6 @@ public class MySqlBoardDao implements BoardDao {
       sqlSession.close();
     }
   }
+
+
 }
