@@ -39,7 +39,7 @@ public class BoardListController implements Controller, DataBinding {
   			currentPage =Integer.parseInt(model.get("currentPage").toString());
   	}
   	catch(NumberFormatException e){
-  		System.out.println("아 시발새끼들아");
+  	
   	}
 	int totalRow = boardDao.selectCount();
 	int totalPage = (int)Math.ceil(totalRow/(double)pageSize);
@@ -63,6 +63,7 @@ public class BoardListController implements Controller, DataBinding {
   	model.put("endPage",endPage);
   	model.put("startPage",startPage);
     model.put("boards", boardDao.selectList(paramMap));
+    
     return "/board/boardList.jsp";
   }
 }

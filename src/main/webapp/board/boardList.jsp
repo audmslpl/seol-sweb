@@ -117,27 +117,50 @@
        								</tbody>
        	</table>
 
-		<c:if test="${startPage > 10}">
-			<a href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
-		</c:if>
-		
-		<c:forEach var="i" begin="${startPage}" end="${endPage}">
-		<c:if test="${orderCond==null}">
-			<a href="list.do?currentPage=${i}">${i}</a>
-		</c:if>
-		<c:if test="${orderCond!=null}">
-			<a href="list.do?orderCond=${orderCond}&currentPage=${i}">${i}</a>
-		</c:if>
-			</c:forEach>
-		
-		
-		<c:if test="${endPage <totalPage}">
-			<a href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}">다음</a>
-		</c:if>
-		
 
-    </div>
-    
+       	<div class="row">
+       		<ul class="nav nav-tabs" role="tablist">
+									<c:if test="${startPage <= 10}">
+										<li class="nav-item col-1" style="display: inline-block;">
+												<a class="nav-link disabled"href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
+								       	</li>				
+									</c:if>								
+									<c:if test="${startPage > 10}">
+										<li class="nav-item col-1" style="display: inline-block;">									
+											<a class="nav-link active"  href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
+										</li>
+									</c:if>									
+									
+									
+									
+									<c:forEach var="i" begin="${startPage}" end="${endPage}">
+										<c:if test="${orderCond==null}">
+											<li class="nav-item col-1" style="display: inline-block;">										
+												<a href="list.do?currentPage=${i}" class="nav-link active" >${i}</a>
+											</li>
+										</c:if>
+										<c:if test="${orderCond!=null}">
+											<li class="nav-item col-1" style="display: inline-block;">	
+												<a href="list.do?orderCond=${orderCond}&currentPage=${i}" class="nav-link active">${i}</a>
+											</li>
+										</c:if>
+									</c:forEach>
+		
+		
+									<c:if test="${endPage < startPage+10}">
+										<li class="nav-item col-1" style="display: inline-block;">	
+											<a class="nav-link disabled"  href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}">다음</a>
+										</li>
+									</c:if>
+									<c:if test="${endPage >=startPage+10}">
+										<li class="nav-item col-1" style="display: inline-block;">	
+											<a class="nav-link active"  href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}" >다음</a>
+										</li>
+									</c:if>
+
+       			</ul>
+       		</div>
+     </div>
 </section>
 
 <jsp:include page="/Tail.jsp"/>
