@@ -113,18 +113,14 @@
  									    <td>${board.createdDate}</td>
  									    <td>${board.count}</td>
 									</tr>
-									</c:forEach>
-       								</tbody>
+								</c:forEach>
+       						</tbody>
        	</table>
 
 
        	<div class="row">
        		<ul class="nav nav-tabs" role="tablist">
-									<c:if test="${startPage <= 10}">
-										<li class="nav-item col-1" style="display: inline-block;">
-												<a class="nav-link disabled"href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
-								       	</li>				
-									</c:if>								
+								
 									<c:if test="${startPage > 10}">
 										<li class="nav-item col-1" style="display: inline-block;">									
 											<a class="nav-link active"  href="list.do?orderCond=${orderCond}&currentPage=${startPage-10}">이전</a>
@@ -147,11 +143,7 @@
 									</c:forEach>
 		
 		
-									<c:if test="${endPage < startPage+10}">
-										<li class="nav-item col-1" style="display: inline-block;">	
-											<a class="nav-link disabled"  href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}">다음</a>
-										</li>
-									</c:if>
+
 									<c:if test="${endPage >=startPage+10}">
 										<li class="nav-item col-1" style="display: inline-block;">	
 											<a class="nav-link active"  href="list.do?orderCond=${orderCond}&currentPage=${startPage+10}" >다음</a>

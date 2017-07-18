@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spms.dao.GalleryDao">
+  <resultMap type="Gallery" id="galleryResultMap">
+    <id column="GNO" property="no"/>
+    <result column="GNAME"    property="title"/>
+    <result column="CONTENT"  property="content"/>
+    <result column="MNO" property="mno" />
+    <result column="MNAME" property="mname" />
+    <result column="CRE_DATE" property="createdDate" javaType="java.sql.Date"/>
+    <result column="HITCOUNT" property="count"/>
+  </resultMap>
+
+    
+  <select id="selectList" parameterType="map" resultMap="galleryResultMap">
+    select GNO, GNAME, MNAME, CRE_DATE, HITCOUNT
+    from gallerys
+    order by
+    <choose> 
+        <when test="orderCond == 'TITLE_ASC'">GNAME asc</when>
+        <when test="orderCond == 'TITLE_DESC'">GNAME desc</when>
+        <when test="orderCond == 'WRITER_ASC'">MNAME asc</when>
+        <when test="orderCond == 'WRITER_DESC'">MNAME desc</when>
+        <when test="orderCond == 'CREATEDDATE_ASC'">CRE_DATE asc</when>
+        <when test="orderCond == 'CREATEDDATE_DESC'">CRE_DATE desc</when>
+        <when test="orderCond == 'HITCOUNT_ASC'">HITCOUNT asc</when>
+        <when test="orderCond == 'HITCOUNT_DESC'">HITCOUNT desc</when>
+        <when test="orderCond == 'GNO_ASC'">GNO asc</when>
+        <otherwise>GNO desc</otherwise>
+    </choose>
+
+  </select>
+    
+    
+    <insert id="insert" parameterType="Gallery">
+    insert into GALLERYS(GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
+    values (#{title},#{content},#{mno},#{mname},now(),0)
+  </insert>
+  
+  <select id="selectOne" parameterType="int" resultMap="galleryResultMap">
+    select GNO, GNAME, CONTENT, MNO, MNAME, CRE_DATE, HITCOUNT
+    from GALLERYS 
+    where GNO=#{value}
+  </select>
+  
+  <update id="update" parameterType="map">
+    update GALLERYS 
+    <set>
+      <if test="title != null">GNAME=#{title},</if>
+      <if test="content != null">CONTENT=#{content},</if>
+      <if test="mno != null">GNO=#{gno},</if>
+      <if test="mname != null">GNAME=#{gname},</if>
+      <if test="createdDate != null">CRE_DATE=#{createdDate},</if>
+      <if test="count != null">HITCOUNT=#{count}</if>
+    </set>
+    where GNO=#{no}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    delete from GALLERYS 
+    where GNO=#{value}
+  </delete>
+  
+  </mapper>

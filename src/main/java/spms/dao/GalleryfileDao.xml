@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spms.dao.GalleryfileDao">
+  <resultMap type="GalleryFiles" id="galleryfilesResultMap">
+    <id column="FNO" property="no"/>
+    <result column="ONAME"    property="originalFilename"/>
+    <result column="SNAME"  property="savedFilename"/>
+    <result column="FILESIZE" property="filesize" />
+    <result column="GNO" property="gno" />
+  </resultMap>
+
+    
+  <select id="selectList" parameterType="int" resultMap="galleryfilesResultMap">
+    select FNO, ONAME, NNAME, FILESIZE, GNO
+    from galleryfiles
+  	where GNO = #{value}
+
+  </select>
+    
+        <insert id="insert" parameterType="GalleryFiles">
+    insert into GALLERYSFILES(ONAME,SNAME,FILESIZE,GNO)
+    values (#{originalFilename},#{savedFilename},#{filesize},#{gno})
+  </insert>
+
+  <delete id="delete" parameterType="int">
+    delete from GALLERYSFILES 
+    where GNO=#{value}
+  </delete>
+  
+  </mapper>

@@ -36,6 +36,7 @@ dependencies {
   compile 'mysql:mysql-connector-java:5.1.30'
   compile 'org.mybatis:mybatis:3.2.6'
   compile 'org.springframework:spring-context:4.0.3.RELEASE'
+  compile group: 'servlets.com', name: 'cos', version: '05Nov2002'
   compile group: 'commons-collections', 
         name: 'commons-collections', 
         version: '3.2'
