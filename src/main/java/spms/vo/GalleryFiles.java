@@ -4,7 +4,7 @@ public class GalleryFiles {
 	  protected int     no;
 	  protected String  originalFilename;
 	  protected String  savedFilename;
-	  protected int filesize;
+	  protected Long filesize;
 	  protected int gno;
 	  
 	  
@@ -35,10 +35,10 @@ public class GalleryFiles {
 			    return this;
 		  }
 	      
-	  	  public int getFilesize() {
+	  	  public Long getFilesize() {
 		    return filesize;
 		  }
-		  public GalleryFiles setFilesize(int Filesize) {
+		  public GalleryFiles setFilesize(Long Filesize) {
 		    this.filesize = Filesize;
 		    return this;
 		  }

@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import spms.vo.Gallery;
-import spms.vo.Member;
+
 
 //스프링 애노테이션(@Component)으로 변경
 @Component("galleryDao")
@@ -38,6 +38,15 @@ public class GalleryDao  {
 	      int count = sqlSession.insert("spms.dao.GalleryDao.insert", gallery);
 	      sqlSession.commit();
 	      return count;
+	    } finally {
+	      sqlSession.close();
+	    }
+	  }
+  public int selectOne() throws Exception{
+	  SqlSession sqlSession = sqlSessionFactory.openSession(); //sequence nextval 재현
+	    try {
+
+	      return sqlSession.selectOne("spms.dao.GalleryDao.selectNextvalue");
 	    } finally {
 	      sqlSession.close();
 	    }

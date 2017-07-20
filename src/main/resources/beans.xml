@@ -26,5 +26,8 @@
     <property name="typeAliasesPackage" value="spms.vo" />
     <property name="mapperLocations" value="classpath*:spms/dao/*Dao.xml" />
   </bean>
+  
 
+
+ 
 </beans>

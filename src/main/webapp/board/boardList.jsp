@@ -38,7 +38,7 @@
     <div class="container">
                     <h1 class="mbr-section-title display-1">BOARD</h1>
                     <p class="mbr-section-lead lead"> 글 많이 달아주세용 <br> 많은 관심부탁드려요 ㅠ</p>
-                    <div class="mbr-section-btn"><a class="btn btn-lg btn-success" href="add.do"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>게시판에 글쓰기</a></div>
+                    <div class="mbr-section-btn"><a class="btn btn-lg btn btn-black" href="add.do"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>게시판에 글쓰기</a></div>
                     
     </div>
 

@@ -26,5 +26,6 @@ public class ContextLoaderListener implements ServletContextListener {
   }
   
   @Override
-  public void contextDestroyed(ServletContextEvent event) {}
+  public void contextDestroyed(ServletContextEvent event) {};
+  public static void main(String[] args){};
 }

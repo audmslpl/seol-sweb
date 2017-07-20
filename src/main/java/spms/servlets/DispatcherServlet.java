@@ -1,7 +1,10 @@
 package spms.servlets;
-
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,26 +15,75 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.context.ApplicationContext;
 
+import com.oreilly.servlet.MultipartRequest;
+
 import spms.bind.DataBinding;
 import spms.bind.ServletRequestDataBinder;
 import spms.controls.Controller;
 import spms.listeners.ContextLoaderListener;
-
+import spms.util.HttpRequestWithModifiableParameters;
+import spms.util.MyFileRenamePolicy;
+import spms.vo.Board;
+import spms.vo.GalleryFiles;
 // 스프링 IoC 컨테이너 사용
-@SuppressWarnings("serial")
+//@SuppressWarnings("serial")
 @WebServlet("*.do")
 public class DispatcherServlet extends HttpServlet {
+	  GalleryFiles galleryfiles;
   @Override
   protected void service(
       HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     response.setContentType("text/html; charset=UTF-8");
+	int sizeLimit = 10*1024*1024;
     String servletPath = request.getServletPath();
+    String savePath = request.getSession().getServletContext().getRealPath("/upload");
     try {
       ApplicationContext ctx = ContextLoaderListener.getApplicationContext();
-      
-      // 페이지 컨트롤러에게 전달할 Map 객체를 준비한다. 
       HashMap<String,Object> model = new HashMap<String,Object>();
+      
+      //multipartrequest 처리
+      if (request.getContentType() != null && request.getContentType().toLowerCase().indexOf("multipart/form-data") > -1 ) { 
+    	  MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",new MyFileRenamePolicy());
+		  Enumeration eParam = multi.getParameterNames();
+		  while (eParam.hasMoreElements()) {
+		      String pName = (String)eParam.nextElement();
+		      String pValue = multi.getParameter(pName);
+		      String type = multi.getContentType(pName);
+		      HttpRequestWithModifiableParameters param = new HttpRequestWithModifiableParameters(request);
+		      param.setParameter(pName, pValue); 
+		      request = (HttpServletRequest)param;
+		  }
+		  String formName="";
+		  String filesName="";
+		  String fileoName="";
+		  Long filesize;
+		  File fileobj;
+		  GalleryFiles galleryfile = new GalleryFiles();
+		  Enumeration files = multi.getFileNames();
+		  int i= 1;
+		  while(files.hasMoreElements()){
+			  
+			  formName=(String)files.nextElement();			  
+			  filesName=multi.getFilesystemName(formName);
+			  if(filesName != null)
+			  {
+				  galleryfile = new GalleryFiles();
+				  fileoName = multi.getOriginalFileName(formName);
+				  fileobj = multi.getFile(formName);
+				  filesize = fileobj.length();
+				  galleryfile.setOriginalFilename(fileoName).setSavedFilename(filesName).setFilesize(filesize);
+				 // System.out.println(fileoName+ "        " + filesName +"        " +filesize);
+				 model.put("galleryfile"+i,galleryfile);
+				 i++;
+			  }
+			  
+		  }
+		  model.put("galleyfilecount", i-1);
+      }
+
+      // 페이지 컨트롤러에게 전달할 Map 객체를 준비한다. 
+      
       model.put("session", request.getSession());
       
       Controller pageController = (Controller) ctx.getBean(servletPath);
@@ -79,6 +131,7 @@ public class DispatcherServlet extends HttpServlet {
       dataType = (Class<?>) dataBinders[i+1];
       dataObj = ServletRequestDataBinder.bind(request, dataType, dataName);
       model.put(dataName, dataObj);
+  //    System.out.println(dataName);
     }
   }
 }

@@ -28,7 +28,6 @@ public class GalleryListController implements Controller, DataBinding{
 	  public String execute(Map<String, Object> model) throws Exception {
 	  	HashMap<String,Object> paramMap = new HashMap<String,Object>();
 		paramMap.put("orderCond", model.get("orderCond"));
-	  	System.out.printf("이건나와?");
 	    model.put("gallerys", GalleryDao.selectList(paramMap));
 
 	    return "/gallery/galleryList.jsp";

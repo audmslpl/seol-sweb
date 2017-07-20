@@ -40,7 +40,7 @@
  <section class="mbr-section extTable1 " id="extTable1-0" style="background-color: rgb(204, 204, 204); padding-top: 120px; padding-bottom: 120px;">
     <div class="container">
                     <h1 class="mbr-section-title display-1">FRIENDS</h1>
-                    <div class="mbr-section-btn"><a class="btn btn-lg btn-success" href="add.do"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Register</a></div>
+                    <div class="mbr-section-btn"><a class="btn btn-lg btn btn-black" href="add.do"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Register</a></div>
                     
     </div>
 

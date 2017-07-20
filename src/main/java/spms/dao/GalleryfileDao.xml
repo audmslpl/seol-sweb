@@ -20,7 +20,7 @@
   </select>
     
         <insert id="insert" parameterType="GalleryFiles">
-    insert into GALLERYSFILES(ONAME,SNAME,FILESIZE,GNO)
+    insert into GALLERYFILES(ONAME,SNAME,FILESIZE,GNO)
     values (#{originalFilename},#{savedFilename},#{filesize},#{gno})
   </insert>
 

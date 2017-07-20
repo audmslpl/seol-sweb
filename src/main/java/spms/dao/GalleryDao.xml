@@ -32,7 +32,10 @@
     </choose>
 
   </select>
-    
+  
+   <select id="selectNextvalue" resultType="int">
+   	select max(GNO)+1 from gallerys;
+   </select>
     
     <insert id="insert" parameterType="Gallery">
     insert into GALLERYS(GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
