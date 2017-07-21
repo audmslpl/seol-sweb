@@ -25,7 +25,7 @@
   </insert>
 
   <delete id="delete" parameterType="int">
-    delete from GALLERYSFILES 
+    delete from GALLERYFILES 
     where GNO=#{value}
   </delete>
   

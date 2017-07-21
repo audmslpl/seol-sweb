@@ -157,7 +157,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="text-xs-center"><a class="btn btn-success" >DOWNLOAD FOR WIN</a> <a class="btn btn-success" >DOWNLOAD FOR WIN</a> <a class="btn btn-success" href="https://mobirise.com/mobirise-free-win.zip">DOWNLOAD FOR WIN</a> </div>
+                <div class="text-xs-center"><a class="btn btn-success"  href="update.do">update</a> <a class="btn btn-success" href="delete.do">delete</a> <a class="btn btn-success" href="https://mobirise.com/mobirise-free-win.zip">DOWNLOAD FOR WIN</a> </div>
             </div>
         </div>
     </div>

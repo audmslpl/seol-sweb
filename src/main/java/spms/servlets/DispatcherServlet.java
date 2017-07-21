@@ -41,7 +41,8 @@ public class DispatcherServlet extends HttpServlet {
     try {
       ApplicationContext ctx = ContextLoaderListener.getApplicationContext();
       HashMap<String,Object> model = new HashMap<String,Object>();
-      
+      System.out.println(savePath);
+	  model.put("savePath",savePath);  
       //multipartrequest 처리
       if (request.getContentType() != null && request.getContentType().toLowerCase().indexOf("multipart/form-data") > -1 ) { 
     	  MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",new MyFileRenamePolicy());
@@ -80,10 +81,10 @@ public class DispatcherServlet extends HttpServlet {
 			  
 		  }
 		  model.put("galleyfilecount", i-1);
+	
       }
 
       // 페이지 컨트롤러에게 전달할 Map 객체를 준비한다. 
-      
       model.put("session", request.getSession());
       
       Controller pageController = (Controller) ctx.getBean(servletPath);

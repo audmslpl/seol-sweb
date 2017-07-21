@@ -42,11 +42,21 @@ public class GalleryDao  {
 	      sqlSession.close();
 	    }
 	  }
+  
   public int selectOne() throws Exception{
 	  SqlSession sqlSession = sqlSessionFactory.openSession(); //sequence nextval 재현
 	    try {
 
 	      return sqlSession.selectOne("spms.dao.GalleryDao.selectNextvalue");
+	    } finally {
+	      sqlSession.close();
+	    }
+	  }
+  public Gallery selectOne(int no) throws Exception{
+	  SqlSession sqlSession = sqlSessionFactory.openSession();//update구현시 사용
+	    try {
+
+	      return sqlSession.selectOne("spms.dao.GalleryDao.selectOne",no);
 	    } finally {
 	      sqlSession.close();
 	    }
