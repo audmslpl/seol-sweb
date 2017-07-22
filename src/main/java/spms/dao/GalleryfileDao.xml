@@ -13,13 +13,20 @@
 
     
   <select id="selectList" parameterType="int" resultMap="galleryfilesResultMap">
-    select FNO, ONAME, NNAME, FILESIZE, GNO
+    select FNO, ONAME, SNAME, FILESIZE, GNO
     from galleryfiles
   	where GNO = #{value}
 
   </select>
+   
+   <select id="selectCount" parameterType="int" resultType="int">
+    select count(*)
+    from galleryfiles
+    where GNO=#{value}
+  </select>
     
-        <insert id="insert" parameterType="GalleryFiles">
+     
+   <insert id="insert" parameterType="GalleryFiles">
     insert into GALLERYFILES(ONAME,SNAME,FILESIZE,GNO)
     values (#{originalFilename},#{savedFilename},#{filesize},#{gno})
   </insert>

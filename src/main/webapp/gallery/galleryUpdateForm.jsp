@@ -30,23 +30,7 @@
   a {color:#000000;}
 
  </style>
- 
- <script>
-    $(document).ready( function() {
- 
-        $("input[type=file]").change(function () {
-            var fileInput = document.getElementById("contract_file");
-            var files = fileInput.files;
-            var file;
-            for (var i = 0; i < files.length; i++) {
-                file = files[i];
-				
-                alert(file.name);
-            }            
-        });
-     });
-      
-  </script>
+
 </head>
 <body>
 <jsp:include page="/Header.jsp"/>
@@ -93,10 +77,10 @@
 
 
 
-                    <form action="add.do" method="post" enctype="multipart/form-data" >
+                    <form action="update.do" method="post" enctype="multipart/form-data" >
 
                         <input type="hidden"  value="${sessionScope.member.no}" name="mno">
-
+						 <input type="hidden"  value="${gallery.no}" name="no">
                         <div class="row row-sm-offset">
 				<c:if test="${empty sessionScope.member.no}">
                             <div class="col-xs-12 col-md-4">
@@ -119,14 +103,14 @@
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label" >Title</label>
-                                    <input type="text" class="form-control" name="title"  >
+                                    <input type="text" class="form-control" name="title"  value="${gallery.title}" >
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label" >Content</label>
-                                    <input type="text" class="form-control" name="content">
+                                    <input type="text" class="form-control" name="content" value="${gallery.content}">
                                 </div>
                             </div>
 
@@ -134,14 +118,14 @@
 
                         <div class="form-group">
                             <label class="form-control-label" >Image</label>
-                            <input type="file"  class="form-control" name="filename0" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename1" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename2" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename3" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename4" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename5" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename6" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename7" id="contract_file" >
+                            <input type="file"  class="form-control" name="filename0"  >
+                         	<input type="file"  class="form-control" name="filename1"  >
+                         	<input type="file"  class="form-control" name="filename2"  >
+                         	<input type="file"  class="form-control" name="filename3"  >
+                         	<input type="file"  class="form-control" name="filename4"  >
+                         	<input type="file"  class="form-control" name="filename5"  >
+                         	<input type="file"  class="form-control" name="filename6"  >
+                         	<input type="file"  class="form-control" name="filename7"  >
                         </div>
 						<div><button type="submit" class="btn btn-success">CONTACT US</button></div>
 

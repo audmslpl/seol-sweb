@@ -19,15 +19,16 @@ public class GalleryfileDao  {
     this.sqlSessionFactory = sqlSessionFactory;
   }
 
-  public List<GalleryFiles> selectList(HashMap<String,Object> paramMap) 
-  		throws Exception {
-    SqlSession sqlSession = sqlSessionFactory.openSession();
-    try {
-      return sqlSession.selectList("spms.dao.GalleryfileDao.selectList", paramMap);
-    } finally {
-      sqlSession.close();
-    }
-  }
+
+  public List<GalleryFiles> selectList(int no) 
+	  		throws Exception {
+	    SqlSession sqlSession = sqlSessionFactory.openSession();
+	    try {
+	      return sqlSession.selectList("spms.dao.GalleryfileDao.selectList", no);
+	    } finally {
+	      sqlSession.close();
+	    }
+	  }
   
 
   public int insert(GalleryFiles galleryFiles) throws Exception  {
@@ -41,7 +42,14 @@ public class GalleryfileDao  {
 	    }
 	  }
 
-
+  public int  selectCount(int no) throws Exception { 
+	    SqlSession sqlSession = sqlSessionFactory.openSession();
+	    try {
+	      return sqlSession.selectOne("spms.dao.GalleryfileDao.selectCount",no); 
+	    } finally {
+	      sqlSession.close();
+	    }
+	  }
 
   
   public int delete(int no) throws Exception {  

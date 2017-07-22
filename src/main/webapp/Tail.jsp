@@ -17,7 +17,16 @@
   <script src="../assets/viewport-checker/jquery.viewportchecker.js"></script>
   <script src="../assets/jarallax/jarallax.js"></script>
   <script src="../assets/theme/js/script.js"></script>
+  <script src="../assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="../assets/jquery-mb-ytplayer/jquery.mb.ytplayer.min.js"></script>
+  <script src="../assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="../assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/theme/js/script.js"></script>
+  <script src="../assets/mobirise-slider-video/script.js"></script>
+  <script src="../assets/mobirise-gallery/player.min.js"></script>
+  <script src="../assets/mobirise-gallery/script.js"></script>
   
   
   <input name="animation" type="hidden">
+     <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   

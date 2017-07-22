@@ -46,8 +46,15 @@ public class GalleryDao  {
   public int selectOne() throws Exception{
 	  SqlSession sqlSession = sqlSessionFactory.openSession(); //sequence nextval 재현
 	    try {
+	    	int no;
+	    	if (sqlSession.selectOne("spms.dao.GalleryDao.selectNextvalue") !=null)
+	    	{
 
-	      return sqlSession.selectOne("spms.dao.GalleryDao.selectNextvalue");
+	    		no =sqlSession.selectOne("spms.dao.GalleryDao.selectNextvalue");
+	    	}
+	    	else
+	    		no = 1;
+	     return no;
 	    } finally {
 	      sqlSession.close();
 	    }

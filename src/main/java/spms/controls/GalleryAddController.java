@@ -53,6 +53,7 @@ public class GalleryAddController  implements Controller, DataBinding{
 					  System.out.println(GalleryFile.getOriginalFilename()+"   " + GalleryFile.getSavedFilename() +"        " + gno);
 					  galleryfiledao.insert(GalleryFile);
 				  }
+				Gallery.setNo(gallerydao.selectOne());
 		    	gallerydao.insert(Gallery);
 		      return "redirect:list.do";
 		    }

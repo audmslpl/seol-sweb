@@ -38,8 +38,8 @@
    </select>
     
     <insert id="insert" parameterType="Gallery">
-    insert into GALLERYS(GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
-    values (#{title},#{content},#{mno},#{mname},now(),0)
+    insert into GALLERYS(GNO,GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
+    values (#{no},#{title},#{content},#{mno},#{mname},now(),0)
   </insert>
   
   <select id="selectOne" parameterType="int" resultMap="galleryResultMap">

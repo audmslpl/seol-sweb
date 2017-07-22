@@ -108,7 +108,7 @@
       							 <c:forEach var="gallery" items="${gallerys}">
 									<tr> 
 							  			<td>${gallery.no}</td>
-  										<td><a href ="update.do?no=${gallery.no}">${gallery.title}</a><a href="delete.do?no=${gallery.no}">[delete]</a></td>
+  										<td><a href ="ShowOne.do?no=${gallery.no}">${gallery.title}</a></td>
  								        <td>${gallery.mname}</td>
  									    <td>${gallery.createdDate}</td>
  									    <td>${gallery.count}</td>

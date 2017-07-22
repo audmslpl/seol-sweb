@@ -41,16 +41,19 @@ public class DispatcherServlet extends HttpServlet {
     try {
       ApplicationContext ctx = ContextLoaderListener.getApplicationContext();
       HashMap<String,Object> model = new HashMap<String,Object>();
-      System.out.println(savePath);
-	  model.put("savePath",savePath);  
+       model.put("savePath",savePath);  
+	  
+	  
       //multipartrequest 처리
       if (request.getContentType() != null && request.getContentType().toLowerCase().indexOf("multipart/form-data") > -1 ) { 
-    	  MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"euc-kr",new MyFileRenamePolicy());
+    	  MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit,"utf-8",new MyFileRenamePolicy());
 		  Enumeration eParam = multi.getParameterNames();
 		  while (eParam.hasMoreElements()) {
 		      String pName = (String)eParam.nextElement();
+
+		     // pName =new String(pName.getBytes("KSC5601"),"8859_1");
 		      String pValue = multi.getParameter(pName);
-		      String type = multi.getContentType(pName);
+		     // pValue =new String(pValue.getBytes("KSC5601"),"8859_1");
 		      HttpRequestWithModifiableParameters param = new HttpRequestWithModifiableParameters(request);
 		      param.setParameter(pName, pValue); 
 		      request = (HttpServletRequest)param;
@@ -74,8 +77,7 @@ public class DispatcherServlet extends HttpServlet {
 				  fileobj = multi.getFile(formName);
 				  filesize = fileobj.length();
 				  galleryfile.setOriginalFilename(fileoName).setSavedFilename(filesName).setFilesize(filesize);
-				 // System.out.println(fileoName+ "        " + filesName +"        " +filesize);
-				 model.put("galleryfile"+i,galleryfile);
+					 model.put("galleryfile"+i,galleryfile);
 				 i++;
 			  }
 			  
