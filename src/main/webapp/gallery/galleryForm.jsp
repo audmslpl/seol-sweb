@@ -134,14 +134,14 @@
 
                         <div class="form-group">
                             <label class="form-control-label" >Image</label>
-                            <input type="file"  class="form-control" name="filename0" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename1" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename2" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename3" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename4" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename5" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename6" id="contract_file" >
-                         	<input type="file"  class="form-control" name="filename7" id="contract_file" >
+                            <input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename0" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename1" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename2" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename3" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename4" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename5" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename6" id="contract_file" >
+                         	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename7" id="contract_file" >
                         </div>
 						<div><button type="submit" class="btn btn-success">CONTACT US</button></div>
 

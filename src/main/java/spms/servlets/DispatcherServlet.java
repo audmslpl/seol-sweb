@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
-
+import java.io.File;
+import net.sf.jmimemagic.Magic;
+import net.sf.jmimemagic.MagicMatch;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +25,6 @@ import spms.controls.Controller;
 import spms.listeners.ContextLoaderListener;
 import spms.util.HttpRequestWithModifiableParameters;
 import spms.util.MyFileRenamePolicy;
-import spms.vo.Board;
 import spms.vo.GalleryFiles;
 // 스프링 IoC 컨테이너 사용
 //@SuppressWarnings("serial")
@@ -66,15 +67,34 @@ public class DispatcherServlet extends HttpServlet {
 		  GalleryFiles galleryfile = new GalleryFiles();
 		  Enumeration files = multi.getFileNames();
 		  int i= 1;
+		  MagicMatch match = null;
+		  String fileType;
+		  String[] fileArray= new String[]{"jpg","jpeg","gif","png"};
+		  int fileindex=0;
 		  while(files.hasMoreElements()){
 			  
 			  formName=(String)files.nextElement();			  
 			  filesName=multi.getFilesystemName(formName);
 			  if(filesName != null)
 			  {
+				  fileobj = multi.getFile(formName);
+
+				  match = Magic.getMagicMatch(fileobj,true,false);
+				  fileType = match.getExtension();
+				  for(int j = 0 ; j<fileArray.length;j++)
+				  {
+					  fileindex = fileArray[j].indexOf(fileType);
+					  if (fileindex >= 0 )
+						  break;
+				  }
+				  if(fileindex == -1)
+				  {	
+					  System.out.println(fileType);
+					  fileobj.delete();
+					    continue;
+				  }
 				  galleryfile = new GalleryFiles();
 				  fileoName = multi.getOriginalFileName(formName);
-				  fileobj = multi.getFile(formName);
 				  filesize = fileobj.length();
 				  galleryfile.setOriginalFilename(fileoName).setSavedFilename(filesName).setFilesize(filesize);
 					 model.put("galleryfile"+i,galleryfile);
@@ -134,7 +154,6 @@ public class DispatcherServlet extends HttpServlet {
       dataType = (Class<?>) dataBinders[i+1];
       dataObj = ServletRequestDataBinder.bind(request, dataType, dataName);
       model.put(dataName, dataObj);
-  //    System.out.println(dataName);
     }
   }
 }

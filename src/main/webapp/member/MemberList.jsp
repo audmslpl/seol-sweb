@@ -2,7 +2,8 @@
   language="java" 
   contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>      
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,10 +100,10 @@
 </tr>
 <c:forEach var="member" items="${members}">
 <tr> 
-  <td>${member.no}</td>
-  <td>${member.name}</td>
-  <td>${member.email}</td>
-  <td>${member.createdDate}</td>
+  <td>${fn:escapeXml(member.no)}</td>
+  <td>${fn:escapeXml(member.name)}</td>
+  <td>${fn:escapeXml(member.email)}</td>
+  <td>${fn:escapeXml(member.createdDate)}</td>
 
 									</tr>
 									</c:forEach>

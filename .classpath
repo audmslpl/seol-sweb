@@ -62,6 +62,11 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/jmimemagic/jmimemagic/0.1.2/61189fa36444a343fe14af218a70a988f321c2f2/jmimemagic-0.1.2-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/jmimemagic/jmimemagic/0.1.2/fde20371ad58ca83621e5c0c153fd2f48634346a/jmimemagic-0.1.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/1952f91d84016a39e31346c9d18bd8c9c4a128a/javax.servlet-api-3.0.1-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
@@ -112,12 +117,32 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true">
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/oro/oro/2.0.8/3598e790ecd76ff7eb249853d4d00822ae1a5e71/oro-2.0.8-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/oro/oro/2.0.8/5592374f834645c4ae250f4c9fbb314c9369d698/oro-2.0.8.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true">
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xerces/xerces/2.4.0/6bd989d9cd28e7193ce2a284d05b7f5db6e7d880/xerces-2.4.0-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xerces/xerces/2.4.0/9e2205a4b10554ffddc50bbc4ca8abeb1d537e14/xerces-2.4.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.7.1/815d652b79b71b7c82a71126d3d7ce8fc8bccdef/xercesImpl-2.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/2.0.2/281e2df846eaa47a60cd74e0513195b1d140bf1c/xml-apis-2.0.2-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/2.0.2/3136ca936f64c9d68529f048c2618bd356bf85c9/xml-apis-2.0.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xml-apis/xmlParserAPIs/2.0.2/d745687ae17671f6709c050e491b16530767d997/xmlParserAPIs-2.0.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -127,12 +152,12 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.0.b2/d8525661c5a0a05702fa41873d250d135031ec25/xml-apis-1.0.b2-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.0.b2/3136ca936f64c9d68529f048c2618bd356bf85c9/xml-apis-1.0.b2.jar" exported="true">
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
+	<classpathentry sourcepath="C:/Users/seol/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="C:/Users/seol/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>

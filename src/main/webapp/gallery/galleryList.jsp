@@ -4,6 +4,7 @@
   contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>      
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,11 +108,11 @@
      						   <tbody>
       							 <c:forEach var="gallery" items="${gallerys}">
 									<tr> 
-							  			<td>${gallery.no}</td>
-  										<td><a href ="ShowOne.do?no=${gallery.no}">${gallery.title}</a></td>
- 								        <td>${gallery.mname}</td>
- 									    <td>${gallery.createdDate}</td>
- 									    <td>${gallery.count}</td>
+							  			<td>${fn:escapeXml(gallery.no)}</td>
+  										<td><a href ="ShowOne.do?no=${gallery.no}">${fn:escapeXml(gallery.title)}</a></td>
+ 								        <td>${fn:escapeXml(gallery.mname)}</td>
+ 									    <td>${fn:escapeXml(gallery.createdDate)}</td>
+ 									    <td>${fn:escapeXml(gallery.count)}</td>
 									</tr>
 								</c:forEach>
        						</tbody>

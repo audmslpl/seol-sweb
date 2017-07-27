@@ -29,7 +29,8 @@ public class HttpRequestWithModifiableParameters extends HttpServletRequestWrapp
         if (paramArray != null && paramArray.length > 0){
           returnValue = paramArray[0];   
         }
-        return returnValue;
+        
+        return checkXSS(returnValue);
     }
     /* (non-Javadoc)
      * @see javax.servlet.ServletRequest#getParameterMap()
@@ -76,5 +77,16 @@ public class HttpRequestWithModifiableParameters extends HttpServletRequestWrapp
     public void setParameter(String name, String[] values){
       params.put(name, values);   
     }
+    
+    private String checkXSS(String value) {
+        //You'll need to remove the spaces from the html entities below
+    		value = value.replaceAll("<", "& lt;").replaceAll(">", "& gt;");
+    		value = value.replaceAll("\\(", "& #40;").replaceAll("\\)", "& #41;");
+    		value = value.replaceAll("'", "& #39;");
+    		value = value.replaceAll("eval\\((.*)\\)", "");
+    		value = value.replaceAll("[\\\"\\\'][\\s]*javascript:(.*)[\\\"\\\']", "\"\"");
+    		value = value.replaceAll("script", "");
+    		return value;
+}
 }
 
