@@ -16,12 +16,12 @@
   
    <select id="selectCount" resultType="int">
     select count(*)
-    from BOARDS
+    from boards
   </select>
     
   <select id="selectList" parameterType="map" resultMap="boardResultMap">
     select BNO, BNAME, MNAME, CRE_DATE, HITCOUNT
-    from BOARDS
+    from boards
     order by
     <choose> 
         <when test="orderCond == 'TITLE_ASC'">BNAME asc</when>
@@ -48,18 +48,18 @@
   
   
   <insert id="insert" parameterType="board">
-    insert into BOARDS(BNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
+    insert into boards(BNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
     values (#{title},#{content},#{mno},#{mname},now(),0)
   </insert>
   
   <select id="selectOne" parameterType="int" resultMap="boardResultMap">
     select BNO, BNAME, CONTENT, MNO, MNAME, CRE_DATE, HITCOUNT
-    from BOARDS 
+    from boards
     where BNO=#{value}
   </select>
   
   <update id="update" parameterType="map">
-    update BOARDS 
+    update boards
     <set>
       <if test="title != null">BNAME=#{title},</if>
       <if test="content != null">CONTENT=#{content},</if>
@@ -72,7 +72,7 @@
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from BOARDS 
+    delete from boards 
     where BNO=#{value}
   </delete>
 </mapper>

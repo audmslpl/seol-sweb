@@ -36,9 +36,15 @@ public class DispatcherServlet extends HttpServlet {
       HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     response.setContentType("text/html; charset=UTF-8");
-	int sizeLimit = 10*1024*1024;
+	int sizeLimit = 30*1024*1024;
+	
     String servletPath = request.getServletPath();
     String savePath = request.getSession().getServletContext().getRealPath("/upload");
+    File temp = new File(savePath);
+    if(!temp.exists())
+    {
+    	temp.mkdirs();
+    }
     try {
       ApplicationContext ctx = ContextLoaderListener.getApplicationContext();
       HashMap<String,Object> model = new HashMap<String,Object>();

@@ -27,12 +27,12 @@
     
      
    <insert id="insert" parameterType="GalleryFiles">
-    insert into GALLERYFILES(ONAME,SNAME,FILESIZE,GNO)
+    insert into galleryfiles(ONAME,SNAME,FILESIZE,GNO)
     values (#{originalFilename},#{savedFilename},#{filesize},#{gno})
   </insert>
 
   <delete id="delete" parameterType="int">
-    delete from GALLERYFILES 
+    delete from galleryfiles 
     where GNO=#{value}
   </delete>
   

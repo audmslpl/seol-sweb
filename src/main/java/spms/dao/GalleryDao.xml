@@ -38,18 +38,18 @@
    </select>
     
     <insert id="insert" parameterType="Gallery">
-    insert into GALLERYS(GNO,GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
+    insert into gallerys(GNO,GNAME,CONTENT,MNO,MNAME,CRE_DATE,HITCOUNT)
     values (#{no},#{title},#{content},#{mno},#{mname},now(),0)
   </insert>
   
   <select id="selectOne" parameterType="int" resultMap="galleryResultMap">
     select GNO, GNAME, CONTENT, MNO, MNAME, CRE_DATE, HITCOUNT
-    from GALLERYS 
+    from gallerys
     where GNO=#{value}
   </select>
   
   <update id="update" parameterType="map">
-    update GALLERYS 
+    update gallerys 
     <set>
       <if test="title != null">GNAME=#{title},</if>
       <if test="content != null">CONTENT=#{content},</if>
@@ -62,7 +62,7 @@
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from GALLERYS 
+    delete from gallerys 
     where GNO=#{value}
   </delete>
   
