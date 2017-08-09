@@ -54,7 +54,12 @@
     delete from members
     where MNO=#{value}
   </delete>
-
+  
+  <select id="emailCheck" parameterType="String" resultType="int">
+  select ifnull(count(EMAIL),0)
+  from members
+  where EMAIL=#{value}
+  </select>
   
   <select id="exist" parameterType="map" resultMap="memberResultMap">
     select MNO, MNAME, EMAIL, CRE_DATE, MOD_DATE

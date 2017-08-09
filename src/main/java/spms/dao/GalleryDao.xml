@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spms.dao.GalleryDao">
-  <resultMap type="Gallery" id="galleryResultMap">
+  <resultMap type="gallery" id="galleryResultMap">
     <id column="GNO" property="no"/>
     <result column="GNAME"    property="title"/>
     <result column="CONTENT"  property="content"/>

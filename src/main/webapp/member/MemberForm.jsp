@@ -48,10 +48,10 @@
 
                         <div class="mbr-table-cell mbr-right-padding-md-up col-md-7 text-xs-center text-md-right">
 
-                            <h3 class="mbr-section-title display-2">INTRO WITH FORM</h3>
+                            <h3 class="mbr-section-title display-2">회원가입</h3>
 
                             <div class="mbr-section-text lead">
-                                <p>Full-screen intro with image background and subscribe form on the right side. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel sunt, neque voluptatibus excepturi laboriosam possimus adipisci quidem dolores omnis, nemo dolore eligendi blanditiis voluptatem in, doloribus hic aperiam maiores fugit.</p>
+                                <p>회원 가입을 해주셔서 감사합니다! <br> 보안을 위해 비밀번호는 8자이상 16자 이하, 알파벳,숫자,특수문자 3가지 조합으로 구성해 주시면 감사하겠습니다!</p>
                             </div>
 
                             
@@ -61,18 +61,25 @@
 
                             <form action="add.do" method="post" style="background-color: rgb(250, 250, 250);" data-form-title="INTRO WITH FORM">
                                     <div class="col-xs-12">
-                                         <input type="text" class="form-control dark" name="name" required="" data-form-field="Name" placeholder="Name*" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                         <input type="text" class="form-control dark" name="name" required="" data-form-field="Name" id="name" placeholder="Name*" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
                                     </div>
 
                                     <div class="col-xs-12"> 
-                                         <input type="text" class="form-control dark" name="email" required="" data-form-field="Email" placeholder="Email*" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
-                                    </div>
-
+                                         <input type="text" class="form-control dark" name="email" required="" data-form-field="Email" id="email" placeholder="Email*" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
+                                     </div>
+                                     <div class="col-xs-12"> 
+										<c:if test="${emailCheck != null}">
+										<p>${emailCheck}</p>
+										</c:if>
+									 </div>
                                     <div class="col-xs-12">
                                          <input type="password" class="form-control dark" name="password" id="password"required="" data-form-field="Password" placeholder="Password" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
                                     </div>
                                     <div class="col-xs-12">
                                          <input type="password" class="form-control dark" name="chkpassword" id="chkpassword" required="" data-form-field="Password" placeholder="Retype Password" style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                    </div>
+                                    <div class="col-xs-12">
+                                    	<p class="message"></p>
                                     </div>
 									<div class="row">
                                 		<div class="col-xs-12" style="margin-top: 10px; text-align: center"><button type="submit" class="btn btn-primary" id='button_joinus' disabled="">Register</button></div>

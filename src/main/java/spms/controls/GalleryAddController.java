@@ -44,7 +44,10 @@ public class GalleryAddController  implements Controller, DataBinding{
 		    if (Gallery.getTitle() == null) {
 		      return "/gallery/galleryForm.jsp";		      
 		    } else {
-
+		    	  if ((int)model.get("galleyfilecount") == 0)
+		    	  {
+		    		  
+		    	  }
 				  for(i=1 ; i<=(int)model.get("galleyfilecount");i++)
 				  {
 					  GalleryFile = (GalleryFiles)model.get("galleryfile"+i);

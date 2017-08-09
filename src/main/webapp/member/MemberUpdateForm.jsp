@@ -67,11 +67,11 @@
                                     </div>
                                     
                                     <div class="col-xs-12">
-                                         <input type="text" class="form-control dark" name="name" required="" data-form-field="Name" value='${member.name}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
+                                         <input type="text" class="form-control dark" name="name" required="" data-form-field="Name" id="name" value='${member.name}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">
                                     </div>
 
                                     <div class="col-xs-12"> 
-                                         <input type="text" class="form-control dark" name="email" required="" data-form-field="Email" value='${member.email}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
+                                         <input type="text" class="form-control dark" name="email" readonly required="" data-form-field="Email" id="email" value='${member.email}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    
                                     </div>
                                     <div class="col-xs-12"> 
                                          <input type="text" class="form-control dark" name="CreatedDate" readonly required="" data-form-field="CreatedDate"  value='${member.createdDate}' style="border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(152, 152, 152); color: rgb(152, 152, 152);">    

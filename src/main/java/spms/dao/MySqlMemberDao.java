@@ -50,7 +50,14 @@ public class MySqlMemberDao implements MemberDao {
   		sqlSession.close();
   	}
   }
-
+  public int emailCheck(String email) throws Exception { 
+	  	SqlSession sqlSession = sqlSessionFactory.openSession();
+	  	try {
+	  		return sqlSession.selectOne("spms.dao.MemberDao.emailCheck", email);
+	  	} finally {
+	  		sqlSession.close();
+	  	}
+	  }
   public int update(Member member) throws Exception { 
     SqlSession sqlSession = sqlSessionFactory.openSession();
     try {
@@ -61,9 +68,7 @@ public class MySqlMemberDao implements MemberDao {
     	if (!member.getName().equals(original.getName())) {
     		paramMap.put("name", member.getName());
     	}
-    	if (!member.getEmail().equals(original.getEmail())) {
-    		paramMap.put("email", member.getEmail());
-    	}
+
     	
     	if (paramMap.size() > 0) {
     		paramMap.put("no", member.getNo());

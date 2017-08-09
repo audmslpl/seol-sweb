@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spms.dao.GalleryfileDao">
-  <resultMap type="GalleryFiles" id="galleryfilesResultMap">
+  <resultMap type="galleryfiles" id="galleryfilesResultMap">
     <id column="FNO" property="no"/>
     <result column="ONAME"    property="originalFilename"/>
     <result column="SNAME"  property="savedFilename"/>
@@ -20,7 +20,7 @@
   </select>
    
    <select id="selectCount" parameterType="int" resultType="int">
-    select count(*)
+    select ifnull(count(*),1)
     from galleryfiles
     where GNO=#{value}
   </select>

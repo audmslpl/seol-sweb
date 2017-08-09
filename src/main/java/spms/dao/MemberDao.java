@@ -12,4 +12,5 @@ public interface MemberDao {
   Member selectOne(int no) throws Exception;
   int update(Member member) throws Exception;
   Member exist(String email, String password) throws Exception;
+  int emailCheck(String email) throws Exception;
 }

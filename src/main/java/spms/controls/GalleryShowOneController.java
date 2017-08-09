@@ -40,12 +40,16 @@ public class GalleryShowOneController implements Controller ,DataBinding{
 	  public String execute(Map<String, Object> model) throws Exception {
 	    Integer no = (Integer)model.get("no");
 	    System.out.println(no);
+	    int filecount = galleryfiledao.selectCount(no);
+	    if (filecount<=0)
+	    	filecount = 1;
+	    
 	    Gallery detailInfo  = gallerydao.selectOne(no);
 	    Integer count = detailInfo.getCount();
 	    count++;
 	    detailInfo.setCount(count);
 	    gallerydao.update(detailInfo);
-	    model.put("filecount",galleryfiledao.selectCount(no));
+	    model.put("filecount",filecount);
 	    model.put("galleryfiles", galleryfiledao.selectList(no));
 	    model.put("gallery", detailInfo);
 		return  "/gallery/galleryShowOneForm.jsp";

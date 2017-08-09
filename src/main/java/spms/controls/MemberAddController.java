@@ -1,5 +1,6 @@
 package spms.controls;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +33,16 @@ public class MemberAddController implements Controller, DataBinding {
     if (member.getEmail() == null) { // 입력폼을 요청할 때
       return "/member/MemberForm.jsp";
     } else { // 회원 등록을 요청할 때
-      memberDao.insert(member);
-      return "redirect:list.do";
-    }
+      if(memberDao.emailCheck(member.getEmail()) ==0){
+          memberDao.insert(member);
+          return "redirect:list.do";  
+      }
+      else
+      {	  
+  	      model.put("emailCheck", "이미 가입된 이메일입니다");
+    	  return "/member/MemberForm.jsp";
+      }
+     }
   }
 }
+

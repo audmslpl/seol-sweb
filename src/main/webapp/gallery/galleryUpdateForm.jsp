@@ -127,8 +127,11 @@
                          	<input type="file"  class="form-control" name="filename6"  >
                          	<input type="file"  class="form-control" name="filename7"  >
                         </div>
-						<div><button type="submit" class="btn btn-success">CONTACT US</button></div>
-
+						<div>
+							<button type="submit" class="btn btn-success">CONTACT US</button>
+							<button class="btn btn-success" href="list.do">게시판으로 돌아가기</button>
+						</div>
+							
                     </form>
                 </div>
             </div>
@@ -136,17 +139,7 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container" id="buttons1-23" style="background-color: rgb(46, 46, 46); padding-top: 20px; padding-bottom: 20px;">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-xs-center"><a class="btn btn-success"  href="update.do">update</a> <a class="btn btn-success" href="delete.do">delete</a> <a class="btn btn-success" href="https://mobirise.com/mobirise-free-win.zip">DOWNLOAD FOR WIN</a> </div>
-            </div>
-        </div>
-    </div>
-
-</section>
 
 
 <jsp:include page="/Tail.jsp"/>

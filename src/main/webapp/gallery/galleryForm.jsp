@@ -30,23 +30,9 @@
   a {color:#000000;}
 
  </style>
- 
- <script>
-    $(document).ready( function() {
- 
-        $("input[type=file]").change(function () {
-            var fileInput = document.getElementById("contract_file");
-            var files = fileInput.files;
-            var file;
-            for (var i = 0; i < files.length; i++) {
-                file = files[i];
-				
-                alert(file.name);
-            }            
-        });
-     });
-      
-  </script>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/chkginput.js"></script>
+
 </head>
 <body>
 <jsp:include page="/Header.jsp"/>
@@ -95,38 +81,38 @@
 
                     <form action="add.do" method="post" enctype="multipart/form-data" >
 
-                        <input type="hidden"  value="${sessionScope.member.no}" name="mno">
+                        <input type="hidden"  value="${sessionScope.member.no}" name="mno" id="mno">
 
                         <div class="row row-sm-offset">
-				<c:if test="${empty sessionScope.member.no}">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group">
-                                    <label class="form-control-label" >Name</label>
-                                    <input type="text" class="form-control" name="mname" value="로그인 후 이용해주세요">
-                                </div>
-                            </div>
-				</c:if>
+							<c:if test="${empty sessionScope.member.no}">
+                   		         <div class="col-xs-12 col-md-4">
+                   		             <div class="form-group">
+                     		               <label class="form-control-label" >Name</label>
+                    		                <input type="text" class="form-control" name="mname" value="로그인 후 이용해주세요">
+                     		           </div>
+                    		        </div>
+							</c:if>
 
-				<c:if test="${!empty sessionScope.member.no}">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group">
-                                    <label class="form-control-label" >Name</label>
-                                    <input type="text" class="form-control" name="mname" value="${sessionScope.member.name}">
-                                </div>
-                            </div>
-				</c:if>
+							<c:if test="${!empty sessionScope.member.no}">
+                	            <div class="col-xs-12 col-md-4">
+                    	            <div class="form-group">
+                        	            <label class="form-control-label" >Name</label>
+                            	        <input type="text" readonly class="form-control" id="name" name="mname" value="${sessionScope.member.name}">
+                            	    </div>
+                            	</div>
+							</c:if>
 
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label" >Title</label>
-                                    <input type="text" class="form-control" name="title"  >
+                                    <input type="text" class="form-control" name="title"  id="title">
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label" >Content</label>
-                                    <input type="text" class="form-control" name="content">
+                                    <input type="text" class="form-control" name="content" id="content">
                                 </div>
                             </div>
 
@@ -143,7 +129,7 @@
                          	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename6" id="contract_file" >
                          	<input type="file"  accept=".gif, .jpg, .png, .jpeg" class="form-control" name="filename7" id="contract_file" >
                         </div>
-						<div><button type="submit" class="btn btn-success">CONTACT US</button></div>
+						<div><button type="submit" class="btn btn-success" id='button_contact' disabled=""  >CONTACT US</button></div>
 
                     </form>
                 </div>
@@ -152,17 +138,6 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section__container" id="buttons1-23" style="background-color: rgb(46, 46, 46); padding-top: 20px; padding-bottom: 20px;">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-xs-center"><a class="btn btn-success"  href="update.do">update</a> <a class="btn btn-success" href="delete.do">delete</a> <a class="btn btn-success" href="https://mobirise.com/mobirise-free-win.zip">DOWNLOAD FOR WIN</a> </div>
-            </div>
-        </div>
-    </div>
-
-</section>
 
 
 <jsp:include page="/Tail.jsp"/>

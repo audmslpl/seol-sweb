@@ -30,7 +30,7 @@ import spms.vo.GalleryFiles;
 //@SuppressWarnings("serial")
 @WebServlet("*.do")
 public class DispatcherServlet extends HttpServlet {
-	  GalleryFiles galleryfiles;
+
   @Override
   protected void service(
       HttpServletRequest request, HttpServletResponse response)
