@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
                 <h3 class="mbr-section-title display-2">${gallery.title}</h3>
-                
+                   <small class="mbr-section-subtitle">${gallery.content}</small>
             </div>
         </div>
     </div>
@@ -48,15 +48,7 @@
 </section>
 
 
-<section class="mbr-section article mbr-section__container" id="content2-27" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 lead"><blockquote>${gallery.content}</blockquote></div>
-        </div>
-    </div>
-
-</section>
 
 <section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding" data-ride="carousel"data-interval="5000" id="slider-q">
     <div>

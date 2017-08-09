@@ -43,8 +43,12 @@
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
                     <h1 class="mbr-section-title display-1">설정훈의 블로그</h1>
-                    <p class="mbr-section-lead lead">룰루랄라 샬라샬라</p>
-                    <div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="notice.html">Go to NOTICE</a> <a class="btn btn-lg btn-primary" href="board.html">Go to BOARD</a> <a class="btn btn-lg btn-primary" href="gallery.html">Go to Gallery</a> </div>
+                    <p class="mbr-section-lead lead">환영합니다</p>
+                    <div class="mbr-section-btn">
+                    	<a class="btn btn-lg btn-primary" href="<%=request.getContextPath()%>/notice/list.do">Go to NOTICE</a>
+                     	<a class="btn btn-lg btn-primary" href="<%=request.getContextPath()%>/board/list.do">Go to BOARD</a>
+                      	<a class="btn btn-lg btn-primary" href="<%=request.getContextPath()%>/gallery/list.do">Go to Gallery</a> 
+                   </div>
                 </div>
             </div>
         </div>

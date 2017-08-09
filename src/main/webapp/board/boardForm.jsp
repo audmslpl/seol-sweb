@@ -48,10 +48,11 @@
 
                         <div class="mbr-table-cell mbr-right-padding-md-up col-md-7 text-xs-center text-md-right">
 
-                            <h3 class="mbr-section-title display-2">INTRO WITH FORM</h3>
+                            <h3 class="mbr-section-title display-2">Hebrews 10:24-25</h3>
 
                             <div class="mbr-section-text lead">
-                                <p>Full-screen intro with image background and subscribe form on the right side. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel sunt, neque voluptatibus excepturi laboriosam possimus adipisci quidem dolores omnis, nemo dolore eligendi blanditiis voluptatem in, doloribus hic aperiam maiores fugit.</p>
+                                <p>And let us consider how we may spur one another on toward love and good deeds.
+Let us not give up meeting together, as some are in the habit of doing, but let us encourage one another--and all the more as you see the Day approaching.</p>
                             </div>
 
                             

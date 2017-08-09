@@ -38,27 +38,6 @@
 <jsp:include page="/Header.jsp"/>
 
 
-<section class="mbr-info mbr-section mbr-section-md-padding mbr-after-navbar" id="msg-box2-21" style="background-color: rgb(46, 46, 46); padding-top: 90px; padding-bottom: 90px;">
-
-    
-    <div class="container">
-        <div class="row">
-
-            <div class="mbr-table-md-up">
-              <div class="mbr-table-cell col-md-4">
-                  
-              </div>
-              <div class="mbr-table-cell mbr-right-padding-md-up col-md-8 text-xs-center text-md-left">
-                  <h3 class="mbr-info-title mbr-section-title display-2">TRENDY WEBSITE BLOCKS</h3>
-                  <h2 class="mbr-info-subtitle mbr-section-subtitle">Cut down the development time with drag-and-drop website builder.</h2>
-              </div>
-            </div>
-
-            
-
-        </div>
-    </div>
-</section>
 
 <section class="mbr-section" id="form1-22" style="background-color: rgb(46, 46, 46); padding-top: 120px; padding-bottom: 120px;">
     
@@ -66,8 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-xs-center">
-                    <h3 class="mbr-section-title display-2">CONTACT FORM</h3>
-                    <small class="mbr-section-subtitle">Shape your future web project with sharp design and refine coded functions.</small>
+                    <h3 class="mbr-section-title display-2">Gallery</h3>
                 </div>
             </div>
         </div>

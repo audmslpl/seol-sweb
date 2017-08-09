@@ -93,52 +93,6 @@
     
     
 </section>
-<section class="mbr-section extToggle1" id="extToggle1-0" style="background-color: rgb(255, 255, 255); padding-top: 100px; padding-bottom: 100px;">
-
-    
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="section-head text-center space30">
-                        <h1>Toggle FAQ</h1>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div id="toggle" class="toggle-panel accordionStyles tab-content">
-                        <div class="toggle-default" style="display: block;">
-                            <div class="panel-heading" id="headingOne">
-                                <span class="signSpan pseudoMinus"></span>
-                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseOneextToggle1-0" aria-expanded="false" aria-controls="collapseOne"><span class="sign"></span>What is Mobirise?</a></h4>
-                            </div>
-                            <div id="collapseOneextToggle1-0" class="panel-collapse noScroll collapse in">
-                                <div class="panel-body"><p>Mobirise is an offline app for Window and Mac to easily create small/medium websites, landing pages, online resumes and portfolios, promo sites for apps, events, services and products.</p></div>
-                            </div>
-                        </div>
-                        <div class="toggle-default" style="display: block;">
-                            <div class="panel-heading" id="headingTwo">
-                                <span class="signSpan pseudoPlus"></span>
-                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseTwoextToggle1-0" aria-expanded="false" aria-controls="collapseTwo">Is it good for me?</a></h4>
-                            </div>
-                            <div id="collapseTwoextToggle1-0" class="panel-collapse noScroll collapse">
-                                <div class="panel-body"><p>Mobirise is perfect for non-techies who are not familiar with the intricacies of web development and for designers who prefer to work as visually as possible, without fighting with code. Also great for pro-coders for fast prototyping and small customers' projects.</p></div>
-                            </div>
-                        </div>
-                        <div class="toggle-default" style="display: block;">
-                            <div class="panel-heading" id="headingThree">
-                                <span class="signSpan pseudoPlus"></span>
-                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseThreeextToggle1-0" aria-expanded="false" aria-controls="collapseThree">Why Mobirise?</a></h4>
-                            </div>
-                            <div id="collapseThreeextToggle1-0" class="panel-collapse noScroll collapse">
-                                <div class="panel-body"><p>Key differences from traditional builders:<br>* Minimalistic, extremely <strong>easy-to-use</strong> interface<br>* <strong>Mobile</strong>-friendliness, latest website blocks and techniques "out-the-box"<br>* <strong>Free</strong> for commercial and non-profit use</p></div>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer2" id="contacts2-1v" style="background-color: rgb(46, 46, 46); padding-top: 90px; padding-bottom: 90px;">
     

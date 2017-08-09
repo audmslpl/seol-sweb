@@ -109,7 +109,7 @@
 
                     <h3 class="mbr-section-title display-2">Europe location</h3>
 
-                    <small class="mbr-section-subtitle">This theme is based on Bootstrap 3 and Bootstrap 4 - most powerful mobile first framework.</small>
+                    <small class="mbr-section-subtitle"></small>
 
                 </div>
             </div>
@@ -123,9 +123,9 @@
                     <div class="feature-img"><img src="../assets/images/firenze.jpg" class="card-img-top"></div>
                     <div class="card-block">
                        <h4 class="feature-title">firenze</h4>
-                       <h5 class="feature-subtitle">Bootstrap 4 has been noted</h5>
+                       <h5 class="feature-subtitle"></h5>
                        <div class="delimiter"></div>
-                       <p class="feature-text">Bootstrap 4 has been noted as one of the most reliable and proven frameworks and Mobirise has been equipped to develop websites using this framework.</p>
+                       <p class="feature-text"></p>
                        
                     </div>
                 </div>
@@ -137,9 +137,9 @@
                     <div class="feature-img"><img src="../assets/images/roma.jpg" class="card-img-top"></div>
                     <div class="card-block">
                         <h4 class="feature-title">Roma</h4>
-                        <h5 class="feature-subtitle">One of Bootstrap 4's big points</h5>
+                        <h5 class="feature-subtitle"></h5>
                        <div class="delimiter"></div>
-                        <p class="feature-text">One of Bootstrap 4's big points is responsiveness and Mobirise makes effective use of this by generating highly responsive website for you.</p>
+                        <p class="feature-text"></p>
                         
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                         <div class="feature-img"><img src="../assets/images/barcelona.jpg" class="card-img-top"></div>
                         <div class="card-block">
                             <h4 class="feature-title">barcelona</h4>
-                            <h5 class="feature-subtitle">Google has a highly exhaustive list of fonts</h5>
+                            <h5 class="feature-subtitle"></h5>
                        <div class="delimiter"></div>
-                            <p class="feature-text">Google has a highly exhaustive list of fonts compiled into its web font platform and Mobirise makes it easy for you to use them on your website easily and freely.</p>
+                            <p class="feature-text"></p>
                             
                         </div>
                     </div>
@@ -166,38 +166,53 @@
 </section>
 
 
-<section class="mbr-section" id="msg-box5-1q" style="background-color: rgb(255, 255, 255); padding-top: 0px; padding-bottom: 0px;">
+<section class="mbr-section extToggle1" id="extToggle1-0" style="background-color: rgb(255, 255, 255); padding-top: 100px; padding-bottom: 100px;">
 
     
-    <div class="container">
-        <div class="row">
-            <div class="mbr-table-md-up">
-
-              
-
-              <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
-                  <h3 class="mbr-section-title display-2">SOLID COLOR INTRO WITH IMAGE</h3>
-                  <div class="lead">
-
-                    <p>Solid color intro with an image on the right side. Also this block has no paddings.</p>
-
-                  </div>
-
-              </div>
-
-
-              
-
-
-              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 50%;">
-                  <div class="mbr-figure"><img src="../assets/images/desktop.jpg"></div>
-              </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-head text-center space30">
+                        <h1>Toggle FAQ</h1>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="toggle" class="toggle-panel accordionStyles tab-content">
+                        <div class="toggle-default" style="display: block;">
+                            <div class="panel-heading" id="headingOne">
+                                <span class="signSpan pseudoMinus"></span>
+                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseOneextToggle1-0" aria-expanded="false" aria-controls="collapseOne"><span class="sign"></span>즐겨 하는 것</a></h4>
+                            </div>
+                            <div id="collapseOneextToggle1-0" class="panel-collapse noScroll collapse in">
+                                <div class="panel-body"><p>자바,파이썬,c++ 등 다양한 언어를 사용하여 개발하는 것을 즐겨합니다.</p></div>
+                            </div>
+                        </div>
+                        <div class="toggle-default" style="display: block;">
+                            <div class="panel-heading" id="headingTwo">
+                                <span class="signSpan pseudoPlus"></span>
+                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseTwoextToggle1-0" aria-expanded="false" aria-controls="collapseTwo">잘 하고 싶은 것?</a></h4>
+                            </div>
+                            <div id="collapseTwoextToggle1-0" class="panel-collapse noScroll collapse">
+                                <div class="panel-body"><p>리버스 엔지니어링과 모의해킹에 관련에 많이 배우고 싶어요 기회가 생긴다면요..</p></div>
+                            </div>
+                        </div>
+                        <div class="toggle-default" style="display: block;">
+                            <div class="panel-heading" id="headingThree">
+                                <span class="signSpan pseudoPlus"></span>
+                                <h4 class="panel-title"><a role="button" class="collapsed" data-toggle="collapse" data-core="" href="#collapseThreeextToggle1-0" aria-expanded="false" aria-controls="collapseThree">여행 가고 싶은 곳?</a></h4>
+                            </div>
+                            <div id="collapseThreeextToggle1-0" class="panel-collapse noScroll collapse">
+                                <div class="panel-body"><p>크로아티아,체코,스위스 등등 많은 곳들을 여행하고싶습니다. ㅠㅠ</p></div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
 </section>
+
 
 
 
